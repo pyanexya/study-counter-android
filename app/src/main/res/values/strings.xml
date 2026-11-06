@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Study Counter</string>
+    <string name="title">Первое приложение</string>
+    <string name="subtitle">Kotlin · Android</string>
+    <string name="increase">Добавить 1</string>
+    <string name="reset">Сбросить</string>
+    <string name="count_description">Нажатий: %1$d</string>
+</resources>
