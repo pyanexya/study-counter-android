@@ -27,4 +27,8 @@ APK: `app/build/outputs/apk/debug/app-debug.apk`.
 
 ## Проверка сборки
 
-Локально в среде подготовки нет Android SDK и эмулятора. Факт успешной сборки или запуска нужно подтверждать отдельно. Workflow Android build собирает debug APK в GitHub Actions и сохраняет артефакт.
+Сборка `assembleDebug` успешно выполнена 6 ноября 2026 года: [GitHub Actions](https://github.com/pyanexya/study-counter-android/actions/runs/42158680862). Debug APK доступен в артефакте `study-counter-debug`. Запуск на устройстве пока не проверен.
+
+## Дополнительная практика
+
+В [practice-api](practice-api) находятся Express-сервер, интерактивная форма и коллекция Postman. Newman выполнил 5 запросов и 10 проверок без ошибок: [результат CI](https://github.com/pyanexya/study-counter-android/actions/runs/42158957831).
