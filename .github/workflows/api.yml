@@ -1,7 +1,7 @@
 name: API practice
 on:
   push:
-    paths: ['practice-api/**', '.github/workflows/api.yml']
+    paths: ["practice-api/**", ".github/workflows/api.yml"]
   workflow_dispatch:
 permissions:
   contents: read
@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: "22"
       - run: npm ci
       - name: Run Postman collection with Newman
         run: node run-tests.cjs

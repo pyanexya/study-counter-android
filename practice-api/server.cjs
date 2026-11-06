@@ -14,5 +14,5 @@ app.post('/api/users', (req, res) => {
   users.push(user);
   res.status(201).json(user);
 });
-app.use((err, req, res, next) => res.status(err.status || 500).json({error: 'Ошибка запроса'}));
+app.use((err, req, res, next) => res.status(err.status || 500).json({ error: 'Ошибка запроса' }));
 const server = app.listen(process.env.PORT || 3000, '127.0.0.1', () => console.log('API listening on http://127.0.0.1:' + server.address().port));
