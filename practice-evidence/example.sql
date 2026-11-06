@@ -1,0 +1,10 @@
+CREATE TABLE users (id INTEGER PRIMARY KEY, name VARCHAR(100) NOT NULL);
+CREATE TABLE orders (id INTEGER PRIMARY KEY, user_id INTEGER NOT NULL REFERENCES users(id), total DECIMAL(10,2) NOT NULL);
+INSERT INTO users VALUES (1, 'Dias'), (2, 'Anna');
+INSERT INTO orders VALUES (101, 1, 1500.00), (102, 1, 2200.00);
+SELECT * FROM users;
+SELECT users.name, orders.id, orders.total FROM users JOIN orders ON users.id = orders.user_id ORDER BY orders.id;
+START TRANSACTION;
+UPDATE orders SET total = 9999.00 WHERE id = 101;
+ROLLBACK;
+SELECT id, total FROM orders WHERE id = 101;
